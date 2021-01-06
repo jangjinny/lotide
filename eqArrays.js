@@ -22,15 +22,15 @@ const eqArrays = function(array1, array2) {
       if (array1[i] !== array2[i]) {
         return false;
       }
-    } return true; 
+    } return true;
   } else {
     return false;
   }
-}
+};
 
-console.log(eqArrays([5, 6, 3], [1, 2,3, 4]))
-console.log(eqArrays([1, 2, 3], [1, 2, 1]))
-console.log(eqArrays(["1", "2", "3"], ["1", "2", "3"])) // => true
-console.log(eqArrays(["1", "2", "3"], ["1", "2", 3])) // => false
+console.log(eqArrays([5, 6, 3], [1, 2,3, 4]));
+console.log(eqArrays([1, 2, 3], [1, 2, 1]));
+console.log(eqArrays(["1", "2", "3"], ["1", "2", "3"]));// => true
+console.log(eqArrays(["1", "2", "3"], ["1", "2", 3])); // => false
 
-console.log(assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true))
+console.log(assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true));
