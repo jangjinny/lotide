@@ -21,25 +21,19 @@ const assertArrayEqual = function(array1, array2) {
 };
 
 const without = function(array1, array2) {
-  // let passedArr = [];
-  for (let i = array1.length - 1; i >= 0; i--) {
-    for (let j = 0; j < array2.length; j++) {
-      if (array1[i] === array2[j]) {
-        array1.splice(i, 1);
-      }
+  let newArr = [];
+  for (let arr of array1) {
+    let check = array2.includes(arr); //returns true if arr is in array2
+    if (!check) {
+      newArr.push(arr);
     }
   }
-  return array1;
+  return newArr;
 };
 
-// const without = function(array1, array2) {
-//   let passedArr = array1.filter(if)
-//   return passedArr;
-// }
-
-console.log(without([1, 3, 4], [2, 1, 4]));
 console.log(without([1, 2, 6], [2, 1, 6]));
 console.log(without([1, 3, 4, 7, 5, 7], [3, 1, 6]));
+console.log(without([3, 1, 6], [1, 3, 4, 7, 5, 7]));
 
 const words = ["hello", "world", "lighthouse"];
 console.log(without(words, ["lighthouse"])); // no need to capture return value for this test case
