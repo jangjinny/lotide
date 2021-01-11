@@ -6,9 +6,4 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-// TEST CODE
-console.log(assertEqual("Lighthouse Labs", "Bootcamp"));
-console.log(assertEqual(1, 1));
-console.log(assertEqual(2, 4));
-console.log(assertEqual("Vancouver", "Vancouver"));
-
+module.exports = assertEqual; //note were passing a variable, not calling a function()
