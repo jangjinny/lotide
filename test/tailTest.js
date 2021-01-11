@@ -1,10 +1,16 @@
 const assertEqual = require('../assertEqual');
 const tail = require('../tail');
+const assert = require('chai').assert;
 
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-// console.log(tail(words)); 
-// no need to capture the return value since we are not checking it
+describe('#tail', () => {
+  it('should return 2 for length of array', () => {
+    const result = tail(["Hello", "Lighthouse", "Labs"]);
+    assert.strictEqual(result.length, 2);
+  });
 
-const result = tail(["Hello", "Lighthouse", "Labs"]);
-console.log(assertEqual(result.length, 2)); // ensure we get back two elements
-console.log(assertEqual(result[0], "Lighthouse")); // ensure first element is "Lighthouse"
+  it('should return lighthouse as the first index of the new array', () => {
+    const result = tail(["Hello", "Lighthouse", "Labs"]);
+    assert.strictEqual(result[0], 'Lighthouse');
+  });
+  
+});
